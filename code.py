@@ -28,7 +28,10 @@ def main():
                 deltax = prev[0]-x;
                 deltay = prev[1]-y;
 
-                move(int(deltax*150), int(deltay*150))
+                try:
+		    move(int(deltax*150), int(deltay*150))
+                except:
+                    break
 
                 prev = (x,y)
                 time.sleep(0.01)
